@@ -1,0 +1,142 @@
+site_name: "Simplicollect – Manuels"
+site_description: Manuels d'installation et d'utilisation de Simplicollect / Installation and user manuals
+# site_url: https://<your-host>/<path>/      # set when the site is published
+# repo_url: https://github.com/uHistorian/<repo>
+# edit_uri: edit/main/docs/
+docs_dir: docs
+
+theme:
+  name: material
+  language: fr
+  font: false
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Passer au mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Passer au mode clair
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: fr
+          default: true
+          name: Français
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: "Simplicollect – Manuals"
+          nav_translations:
+            "Accueil": "Home"
+            "Manuel d'installation et de mise en service": "Installation and Commissioning Manual"
+            "Passerelle Simplicollect": "Simplicollect Gateway"
+            "Installation et raccordement de la passerelle MINI": "Installing and connecting the MINI gateway"
+            "Exemple de configuration d'un routeur pour la configuration des ports": "Router configuration example for port forwarding"
+            "Raccordement à Internet": "Connecting to the Internet"
+            "Session Windows 10": "Windows 10 session"
+            "Session Linux (SSH)": "Linux session (SSH)"
+            "Modules Simplicollect": "Simplicollect Modules"
+            "Unité solaire/batterie et collecte de données": "Solar/battery unit and data collection"
+            "Module sans fil- Panneau solaire et batterie": "Wireless module - Solar panel and battery"
+            "Remplacement SIM": "SIM replacement"
+            "Module MaestrEau et Irrigation": "MaestrEau Module and Irrigation"
+            "Configuration de la connexion Wifi et de l'adresse IP": "Wi-Fi connection and IP address configuration"
+            "Remplacement SIM sur MaestrEau": "SIM replacement on MaestrEau"
+            "Manuel d'utilisation": "User Manual"
+            "Groupes Tags": "Tag Groups"
+            "Paramètres": "Settings"
+            "Sécurité": "Security"
+            "Aires et Zones": "Areas and Zones"
+            "Scénarios": "Scenarios"
+            "MaestrEau - Utilisation": "MaestrEau - Usage"
+            "Opérations": "Operations"
+            "État des Zones": "Zone Status"
+            "MaestrEau sur iPhone": "MaestrEau on iPhone"
+            "MaestrEau sur Android": "MaestrEau on Android"
+            "Dataview sur Web": "Dataview on Web"
+            "Dataview sur iPhone": "Dataview on iPhone"
+            "Dataview sur Android": "Dataview on Android"
+            "Utilitaire de configuration des modules": "Module Configuration Utility"
+            "Utilitaire de configuration VirtualHub": "VirtualHub Configuration Utility"
+            "Changement de mot de passe": "Changing a password"
+            "SimpliMétéo": "SimpliWeather"
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - "Accueil": index.md
+  - "Manuel d'installation et de mise en service":
+      - manuel-d-installation-et-de-mise-en-service/index.md
+      - "Passerelle Simplicollect":
+          - manuel-d-installation-et-de-mise-en-service/passerelle-simplicollect/index.md
+          - "Installation et raccordement de la passerelle MINI": manuel-d-installation-et-de-mise-en-service/passerelle-simplicollect/installation-et-raccordement-de-la-passerelle-mini.md
+          - "Exemple de configuration d'un routeur pour la configuration des ports": manuel-d-installation-et-de-mise-en-service/passerelle-simplicollect/exemple-de-configuration-d-un-routeur-pour-la-configuration-des-ports.md
+          - "Raccordement à Internet": manuel-d-installation-et-de-mise-en-service/passerelle-simplicollect/raccordement-a-internet.md
+          - "Session Windows 10": manuel-d-installation-et-de-mise-en-service/passerelle-simplicollect/session-windows-10.md
+          - "Session Linux (SSH)": manuel-d-installation-et-de-mise-en-service/passerelle-simplicollect/session-linux-ssh.md
+      - "Modules Simplicollect":
+          - manuel-d-installation-et-de-mise-en-service/modules-simplicollect/index.md
+          - "Unité solaire/batterie et collecte de données": manuel-d-installation-et-de-mise-en-service/modules-simplicollect/unite-solaire-batterie-et-collecte-de-donnees.md
+          - "Module sans fil- Panneau solaire et batterie": manuel-d-installation-et-de-mise-en-service/modules-simplicollect/module-sans-fil-panneau-solaire-et-batterie.md
+          - "Remplacement SIM": manuel-d-installation-et-de-mise-en-service/modules-simplicollect/remplacement-sim.md
+      - "Module MaestrEau et Irrigation":
+          - manuel-d-installation-et-de-mise-en-service/module-maestreau-et-irrigation/index.md
+          - "Configuration de la connexion Wifi et de l'adresse IP": manuel-d-installation-et-de-mise-en-service/module-maestreau-et-irrigation/configuration-de-la-connexion-wifi-et-de-l-adresse-ip.md
+          - "Remplacement SIM sur MaestrEau": manuel-d-installation-et-de-mise-en-service/module-maestreau-et-irrigation/remplacement-sim-sur-maestreau.md
+  - "Manuel d'utilisation":
+      - manuel-d-utilisation/index.md
+      - "Configuration":
+          - manuel-d-utilisation/configuration/index.md
+          - "Modules": manuel-d-utilisation/configuration/modules.md
+          - "Tags": manuel-d-utilisation/configuration/tags.md
+          - "Groupes Tags": manuel-d-utilisation/configuration/groupes-tags.md
+          - "Notifications": manuel-d-utilisation/configuration/notifications.md
+          - "Paramètres": manuel-d-utilisation/configuration/parametres.md
+          - "Messages": manuel-d-utilisation/configuration/messages.md
+          - "Sécurité": manuel-d-utilisation/configuration/securite.md
+      - "MaestrEau - Configuration":
+          - manuel-d-utilisation/maestreau-configuration/index.md
+          - "Aires et Zones": manuel-d-utilisation/maestreau-configuration/aires-et-zones.md
+          - "Scénarios": manuel-d-utilisation/maestreau-configuration/scenarios.md
+      - "MaestrEau - Utilisation":
+          - manuel-d-utilisation/maestreau-utilisation/index.md
+          - "MaestrEau Web":
+              - manuel-d-utilisation/maestreau-utilisation/maestreau-web/index.md
+              - "Opérations": manuel-d-utilisation/maestreau-utilisation/maestreau-web/operations.md
+              - "État des Zones": manuel-d-utilisation/maestreau-utilisation/maestreau-web/etat-des-zones.md
+          - "MaestrEau sur iPhone": manuel-d-utilisation/maestreau-utilisation/maestreau-sur-iphone.md
+          - "MaestrEau sur Android": manuel-d-utilisation/maestreau-utilisation/maestreau-sur-android.md
+      - "Dataview":
+          - manuel-d-utilisation/dataview/index.md
+          - "Dataview sur Web": manuel-d-utilisation/dataview/dataview-sur-web.md
+          - "Dataview sur iPhone": manuel-d-utilisation/dataview/dataview-sur-iphone.md
+          - "Dataview sur Android": manuel-d-utilisation/dataview/dataview-sur-android.md
+      - "Utilitaire de configuration des modules": manuel-d-utilisation/utilitaire-de-configuration-des-modules.md
+      - "Utilitaire de configuration VirtualHub": manuel-d-utilisation/utilitaire-de-configuration-virtualhub.md
+      - "Changement de mot de passe": manuel-d-utilisation/changement-de-mot-de-passe.md
+      - "SimpliMétéo": manuel-d-utilisation/simplimeteo.md
